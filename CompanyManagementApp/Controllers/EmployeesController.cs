@@ -8,6 +8,9 @@ namespace CompanyManagementApp.Controllers
 {
     public class EmployeesController : Controller
     {
+
+
+        // DI for service intefaces 
         private readonly IDepartmentService departmentService;
         
         private readonly IEmployeeService employeeService;
@@ -26,6 +29,7 @@ namespace CompanyManagementApp.Controllers
             var model = new AddEmployeeViewModel();
             model.DepartmentsSelectList = new List<SelectListItem>();
 
+            // for select tag for add view 
             foreach(var department in departments)
             {
                 model.DepartmentsSelectList.Add(new SelectListItem { Text = department.Name, Value = department.Id.ToString()});
@@ -75,6 +79,7 @@ namespace CompanyManagementApp.Controllers
                
                 emp.DepartmentsSelectList = new List<SelectListItem>();
 
+                // for select tag for View 
                 foreach (var department in departments)
                 {
                     emp.DepartmentsSelectList.Add(new SelectListItem { Text = department.Name, Value = department.Id.ToString() });

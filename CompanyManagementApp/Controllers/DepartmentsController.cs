@@ -7,6 +7,8 @@ namespace CompanyManagementApp.Controllers
 {
     public class DepartmentsController : Controller
     {
+
+        // DI for service intefaces 
         private readonly IDepartmentService departmentService;
 
         public DepartmentsController(IEmployeeService employeeService, IDepartmentService departmentService)

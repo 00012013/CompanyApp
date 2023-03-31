@@ -7,6 +7,8 @@ namespace CompanyManagementApp.Service
 {
     public class EmployeeService : IEmployeeService
     {
+
+        // DI for repository intefaces and DbContext configuration class
         private readonly MVCDbConetext mVCDbConetext;
         private readonly IEmployeeRepository employeeRepository;
 
@@ -16,6 +18,7 @@ namespace CompanyManagementApp.Service
             this.employeeRepository = employeeRepository;
         }
 
+        // creates employee
         public void AddEmployee(AddEmployeeViewModel addEmployeeRequest)
         {
 
@@ -31,16 +34,19 @@ namespace CompanyManagementApp.Service
              employeeRepository.CreateEmployee(employee);
         }
 
+        // returns list of all employees
         public List<Employee> GetAllEmployees()
         {   
             return employeeRepository.GetAll();
         } 
 
+        // returns employee by Id
         public Employee GetEmployee(Guid id)
         {   
             return employeeRepository.GetById(id);
         }
 
+        // deletes employee
         public void DeleteEmployee(UpdateEmployee updateEmployee)
         {
             var employee = employeeRepository.GetById(updateEmployee.Id);
@@ -52,6 +58,7 @@ namespace CompanyManagementApp.Service
             
         }
 
+        // updates employee
         public void UpdateEmployee(UpdateEmployee updateEmployee)
         {
             var dbEmployee = employeeRepository.GetById(updateEmployee.Id);

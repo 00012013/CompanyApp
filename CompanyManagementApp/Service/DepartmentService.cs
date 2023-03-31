@@ -8,6 +8,8 @@ namespace CompanyManagementApp.Service
     public class DepartmentService : IDepartmentService
     {
 
+        // DI for repository intefaces 
+
         private readonly IDepartmentRepository departmentRepository;
         private readonly MVCDbConetext mVCDbConetext;
 
@@ -17,11 +19,13 @@ namespace CompanyManagementApp.Service
             this.mVCDbConetext = mVCDbConetext;
         }
 
+        // returns list of all departments
         public List<Department> GetAllDepartments()
         {
             return departmentRepository.GetDepartments(); 
         }
 
+        // creates department
         public void AddDepartment(AddDepartment addDepartment)
         {
             var departments = departmentRepository.GetDepartmentByName(addDepartment.Name);
@@ -37,6 +41,7 @@ namespace CompanyManagementApp.Service
            
         }
 
+        // Creates departmetn if no departments in database
         public void CreateFirstDepartments()
         {
             var departments = GetAllDepartments();
@@ -49,6 +54,7 @@ namespace CompanyManagementApp.Service
            
         }
 
+        // returns department by Id
         public async Task<Department> GetDepartmentById(Guid id)
         {
             Task<Department> department = departmentRepository.GetDepartment(id);
@@ -56,7 +62,7 @@ namespace CompanyManagementApp.Service
             var dep = await department;
             return dep;
         }
-
+        // Updates department
         public void UpdateDepartment(UpdateDepartment updateDepartment)
         {
 
@@ -68,12 +74,12 @@ namespace CompanyManagementApp.Service
                 mVCDbConetext.SaveChanges();
             }
         }
-
+        // returns department by Id
         public Department GetDepartment(Guid id)
         {
             return departmentRepository.GetDepartmentById(id);
         }
-
+        // Deletes department 
         public void DeleteDepartment(Department department)
         {
             if(department != null)
