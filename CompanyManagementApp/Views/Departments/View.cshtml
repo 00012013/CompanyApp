@@ -1,0 +1,17 @@
+﻿@model CompanyManagementApp.Models.Dto.UpdateDepartment
+@{
+}
+<h1>Edit Department</h1>
+<form method="post" action="View" class="mt-5">
+    <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" readonly class="form-control" asp-for="Id">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Edit</button>
+    <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Departments">Delete</button>
+</form>

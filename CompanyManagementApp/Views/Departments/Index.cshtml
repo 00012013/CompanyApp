@@ -1,0 +1,26 @@
+﻿@model List<CompanyManagementApp.Models.Department>
+
+@{
+}
+
+<h1>Department</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th> </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var department in Model)
+        {
+            <tr>
+                <td>@department.Id</td>
+                <td>@department.Name</td>
+                <td><a href="Departments/View/@department.Id">View</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

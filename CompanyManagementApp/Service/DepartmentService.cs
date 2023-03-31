@@ -60,7 +60,7 @@ namespace CompanyManagementApp.Service
         public void UpdateDepartment(UpdateDepartment updateDepartment)
         {
 
-            var dbDepartment = departmentRepository.GetDepartmentById(updateDepartment.Id);
+            var dbDepartment = departmentRepository.GetDepartmentByName(updateDepartment.Name);
 
             if (dbDepartment != null)
             {
