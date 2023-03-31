@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hp\\source\\repos\\CompanyManagementApp\\CompanyManagementApp\\CompanyManagementApp.csproj": {}
+    "C:\\Users\\Hp\\Source\\Repos\\00012013\\CompanyApp\\CompanyManagementApp\\CompanyManagementApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hp\\source\\repos\\CompanyManagementApp\\CompanyManagementApp\\CompanyManagementApp.csproj": {
+    "C:\\Users\\Hp\\Source\\Repos\\00012013\\CompanyApp\\CompanyManagementApp\\CompanyManagementApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hp\\source\\repos\\CompanyManagementApp\\CompanyManagementApp\\CompanyManagementApp.csproj",
+        "projectUniqueName": "C:\\Users\\Hp\\Source\\Repos\\00012013\\CompanyApp\\CompanyManagementApp\\CompanyManagementApp.csproj",
         "projectName": "CompanyManagementApp",
-        "projectPath": "C:\\Users\\Hp\\source\\repos\\CompanyManagementApp\\CompanyManagementApp\\CompanyManagementApp.csproj",
+        "projectPath": "C:\\Users\\Hp\\Source\\Repos\\00012013\\CompanyApp\\CompanyManagementApp\\CompanyManagementApp.csproj",
         "packagesPath": "C:\\Users\\Hp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hp\\source\\repos\\CompanyManagementApp\\CompanyManagementApp\\obj\\",
+        "outputPath": "C:\\Users\\Hp\\Source\\Repos\\00012013\\CompanyApp\\CompanyManagementApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
